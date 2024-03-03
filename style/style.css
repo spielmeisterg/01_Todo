@@ -1,0 +1,105 @@
+Apply a modern reset
+body, ul, form {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply styles to the form container */
+#form {
+  margin: 20px auto;
+  margin-top: 5%;
+  width: 80%; /* Set to 80% for desktop view */
+  display: flex; /* Make form elements appear next to each other */
+  flex-flow: row nowrap; /* Align elements in a column */
+}
+
+/* Style the text input in the form */
+#newTask {
+  flex-grow: 3;
+  margin-bottom: 10px; /* Add some space between input and button */
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #d2dae2; /* Matte blue-gray */
+  outline: none;
+  font-size: 16px;
+  transition: border-bottom-color 0.3s ease;
+}
+
+/* Style the "Add task" button in the form */
+#submit {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: #6c7a89; /* Matte slate gray */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Add a hover effect to the button */
+#submit:hover {
+  background-color: #4b5961; /* Darker matte slate gray on hover */
+}
+
+/* Style the task list container */
+#taskList {
+  list-style-type: none;
+  margin: 20px auto;
+  width: 80%; /* Set to 80% for desktop view */
+}
+
+/* Style each task item */
+#taskList li {
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ecf0f1; /* Light matte gray */
+  border-radius: 4px;
+  background-color: #fff; /* White background */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+/* Style the checkbox and label within each task item */
+#taskList li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Style the task text */
+#taskList li label {
+  flex: 1; /* Take up remaining space */
+}
+
+/* Style the delete button within each task item */
+#taskList li a[name="delete"] {
+  padding: 8px 12px;
+  background-color: #e74c3c; /* Soft red button color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Add a hover effect to the delete button */
+#taskList li a[name="delete"]:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  text-decoration: none;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+  #form, #taskList {
+    width: 95%; /* Set to 95% for mobile view */
+  }
+
+  #submit {
+    margin-top: 0;
+  }
+}
