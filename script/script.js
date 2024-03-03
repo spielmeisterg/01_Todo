@@ -8,6 +8,11 @@ const form = document.getElementById("form");
 let taskList = [];
 
 const addNewTask = (taskName) => {
+  // console.log()
+  if(typeof taskName !== typeof "string"){
+    // console.log(newTodoItem.value)
+    taskName = newTodoItem.value;
+  }
   //push new task to array
   taskList.push(taskName);
   createPageElements(taskName);
